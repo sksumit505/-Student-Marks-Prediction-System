@@ -55,3 +55,39 @@ Marks_prediction_system/
 ├── app.py                 # Core ML backend & Streamlit application
 ├── student_data.csv       # Synthetic dataset exported from Pandas
 └── README.md              # Project documentation
+📖 Installation & Developer Setup
+Follow these steps to set up the environment and dependencies on your local machine:
+
+1. Verify Python Environment
+Ensure Python 3.10+ is installed on your system:
+
+Bash
+python --version
+2. Install Required Packages
+Open your terminal (in VS Code: Ctrl + ~ or Cmd + ~) and install all required libraries:
+
+Bash
+pip install pandas numpy scikit-learn streamlit
+(Note: If you run into NumPy 2.0 version compatibility warnings, run pip install --upgrade numpy scipy scikit-learn streamlit).
+
+⚙️ How to Run the Project
+Option 1: Launch the Interactive Web App (Recommended)
+Do NOT run Streamlit files using standard python app.py. Execute it using the Streamlit CLI:
+
+Bash
+streamlit run app.py
+If streamlit is not recognized directly by your PATH, use the Python module runner:
+
+Bash
+python -m streamlit run app.py
+# On macOS/Linux:
+python3 -m streamlit run app.py
+This automatically starts a local web server and opens the dashboard in your browser at http://localhost:8501.
+
+Option 2: Run as standard Python Script (Data Generation/Export)
+To run the underlying script to generate and export student_data.csv without launching the UI:
+
+Bash
+python app.py
+# On macOS/Linux:
+python3 app.py
